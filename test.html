@@ -20,6 +20,7 @@
 
         .noBorder {
             border: none;
+            height: 2vw;
         }
 
         .headingOne {
@@ -89,45 +90,6 @@
         .text_color_red {
             color: rgb(71, 5, 44);
         }
-        
-        /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
     </style>
 </head>
 
@@ -135,67 +97,268 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
+                <center>
                 <h1 class="headingOne" style="color: #7a3535; font-weight:bold"> Periodiskā Tabula </h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row align-text-bottom bottom-0">
+            <div class="col-xl-2 col-12 align-text-bottom">
                 <table>
-                    <tr>                
+                    <tr style="height:80px">                
                         <td class="noBorder" colspan="1"></td>
                         <td id="H" class="_color_1 text_color_green">1<br/>H</td>
                     </tr>
-                    <tr> 
+                    <tr style="height:80px"> 
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 text_color_red">3<br/>Li</td>
-                        <td class="color_3 text_color_red">4<br/>Be</td>           
+                        <td id="Li"class="color_2 text_color_red">3<br/>Li</td>
+                        <td id="Be"class="color_3 text_color_red">4<br/>Be</td>           
                     </tr>
-                    <tr>
+                    <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 text_color_red">11<br/>Na</td>
-                        <td class="color_3 text_color_red">12<br/>Mg</td>          
+                        <td id="Na"class="color_2 text_color_red">11<br/>Na</td>
+                        <td id="Mg"class="color_3 text_color_red">12<br/>Mg</td>          
                     </tr>
-                    <tr>
+                    <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 text_color_red">19<br/>K</td>
-                        <td class="color_3 text_color_red">20<br/>Ca</td>        
+                        <td id="K"class="color_2 text_color_red">19<br/>K</td>
+                        <td id="Ca"class="color_3 text_color_red">20<br/>Ca</td>        
                     </tr>
-                    <tr>
+                    <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td id="H" class="color_2 text_color_red">37<br/>Rb</td>
-                        <td id="H" class="color_3 text_color_red">38<br/>Sr</td>          
+                        <td id="Rb" class="color_2 text_color_red">37<br/>Rb</td>
+                        <td id="Sr" class="color_3 text_color_red">38<br/>Sr</td>          
                     </tr>
-                    <tr>
+                    <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td id="H" class="color_2 text_color_blue">55<br/>Cs</td>
-                        <td id="H" class="color_3 text_color_red">56<br/>Ba</td>         
+                        <td id="Cs" class="color_2 text_color_blue">55<br/>Cs</td>
+                        <td id="Ba" class="color_3 text_color_red">56<br/>Ba</td>         
                     </tr>
-                    <tr></tr>
+                    <tr style="height:80px">
+                        <td class="noBorder" colspan="1"></td>
+                        <td id="Fr" class="color_2 text_color_blue">87<br/>Fr</td>
+                        <td id="Ra" class="color_3 text_color_red">88<br/>Ra</td>
+                    </tr>
                 </table>
             </div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col-xl-6 col-12">
+                <table>
+                    <tr style="height:80px">
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Sc" class="color_5 text_color_red">21<br/>Sc</td>
+                        <td id="Ti" class="color_5 text_color_red">22<br/>Ti</td>
+                        <td id="V" class="color_5 text_color_red">23<br/>V</td>
+                        <td id="Cr" class="color_5 text_color_red">24<br/>Cr</td>
+                        <td id="Mn" class="color_5 text_color_red">25<br/>Mn</td>
+                        <td id="Fe" class="color_5 text_color_red">26<br/>Fe</td>
+                        <td id="Co" class="color_5 text_color_red">27<br/>Co</td>
+                        <td id="Ni" class="color_5 text_color_red">28<br/>Ni</td>
+                        <td id="Cu" class="color_5 text_color_red">29<br/>Cu</td>
+                        <td id="Zn" class="color_5 text_color_red">30<br/>Zn</td>                  
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Y" class="color_5 text_color_red">39<br/>Y</td>
+                        <td id="Zr" class="color_5 text_color_red">40<br/>Zr</td>
+                        <td id="Nb" class="color_5 text_color_red">41<br/>Nb</td>
+                        <td id="Mo" class="color_5 text_color_red">42<br/>Mo</td>
+                        <td id="Tc" class="color_5 text_color_red">43<br/>Tc</td>
+                        <td id="Ru" class="color_5 text_color_red">44<br/>Ru</td>
+                        <td id="Rh" class="color_5 text_color_red">45<br/>Rh</td>
+                        <td id="Pd" class="color_5 text_color_red">46<br/>Pd</td>
+                        <td id="Ag" class="color_5 text_color_red">47<br/>Ag</td>
+                        <td id="Cd" class="color_5 text_color_red">48<br/>Cd</td> 
+                    </tr>
+                    <tr style="height:80px">
+                        <td class="color_4 text_color_red">57-71 Lantanīdi<br />&nbsp;</td>
+                        <td id="Hf" class="color_5 text_color_red">72<br/>Hf</td>
+                        <td id="Ta" class="color_5 text_color_red">73<br/>Ta</td>
+                        <td id="W" class="color_5 text_color_red">74<br/>W</td>
+                        <td id="Re" class="color_5 text_color_red">75<br/>Re</td>
+                        <td id="Os" class="color_5 text_color_red ">76<br/>Os</td>
+                        <td id="Ir" class="color_5 text_color_red">77<br/>Ir</td>
+                        <td id="Pt" class="color_5 text_color_red">78<br/>Pt</td>
+                        <td id="Au" class="color_5 text_color_red">79<br/>Au</td>
+                        <td id="Hg" class="color_5 text_color_blue">80<br/>Hg</td>        
+                    </tr>
+                    <tr style="height:80px">
+                        <td class="color_12 text_color_red">89-103 Aktinīdi<br />&nbsp;</td>
+                        <td id="Rf" class="color_5 text_color_red">104<br/>Rf</td>
+                        <td id="Db" class="color_5 text_color_red">105<br/>Db</td>
+                        <td id="Sg" class="color_5 text_color_red">106<br/>Sg</td>
+                        <td id="Bh" class="color_5 text_color_red">107<br/>Bh</td>
+                        <td id="Hs" class="color_5 text_color_red">108<br/>Hs</td>
+                        <td id="Mt" class="color_5 text_color_red">109<br/>Mt</td>
+                        <td id="Ds" class="color_5 text_color_red">110<br/>Ds</td>
+                        <td id="Rg" class="color_5 text_color_red">111<br/>Rg</td>
+                        <td id="Cn" class="color_5 text_color_red">112<br/>Cn</td>        
+                    </tr>
+                </table>
+            </div>
+            <div class="col-xl-4 col-12">
+                <table>
+                    <tr style="height:80px">
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td class="noBorder" colspan="1"></td>
+                        <td id="He" class="color_9 text_color_green">2<br/>He</td>  
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="B" class="color_6 text_color_red">5<br/>B</td>
+                        <td id="C" class="_color_1 text_color_red">6<br/>C</td>
+                        <td id="N" class="_color_1 text_color_green">7<br/>N</td>
+                        <td id="O" class="_color_1 text_color_green">8<br/>O</td>
+                        <td id="F" class="color_8 text_color_green">9<br/>F</td>
+                        <td id="Ne" class="color_9 text_color_green">10<br/>Ne</td>          
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Al" class="color_7 text_color_red">13<br/>Al</td>
+                        <td id="Si" class="color_6 text_color_red">14<br/>Si</td>
+                        <td id="P" class="_color_1 text_color_red">15<br/>P</td>
+                        <td id="S" class="_color_1 text_color_red">16<br/>S</td>
+                        <td id="Cl" class="color_8 text_color_green">17<br/>Cl</td>
+                        <td id="Ar" class="color_9 text_color_green">18<br/>Ar</td>        
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Ga" class="color_7 text_color_blue">31<br/>Ga</td>
+                        <td id="Ge" class="color_6 text_color_red">32<br/>Ge</td>
+                        <td id="As" class="color_6 text_color_red">33<br/>As</td>
+                        <td id="Se" class="_color_1 text_color_red">34<br/>Se</td>
+                        <td id="Br" class="color_8 text_color_blue">35<br/>Br</td>
+                        <td id="Kr" class="color_9 text_color_green">36<br/>Kr</td>         
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="In" class="color_7 text_color_red">49<br/>In</td>
+                        <td id="Sn" class="color_7 text_color_red">50<br/>Sn</td>
+                        <td id="Sb" class="color_6 text_color_red">51<br/>Sb</td>
+                        <td id="Te" class="color_6 text_color_red">52<br/>Te</td>
+                        <td id="I" class="color_8 text_color_red">53<br/>I</td>
+                        <td id="Xe" class="color_9 text_color_green">54<br/>Xe</td>          
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Tl" class="color_7 text_color_red">81<br/>Tl</td>
+                        <td id="Pb" class="color_7 text_color_red">82<br/>Pb</td>
+                        <td id="Bi" class="color_7 text_color_red ">83<br/>Bi</td>
+                        <td id="Po" class="color_6 text_color_red">84<br/>Po</td>
+                        <td id="At" class="color_8 text_color_red">85<br/>At</td>
+                        <td id="Rn" class="color_9 text_color_green">86<br/>Rn</td>         
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Nh" class="color_11 text_color_red">113<br/>Nh</td>
+                        <td id="Fl" class="color_11 text_color_red">114<br/>Fl</td>
+                        <td id="Mc" class="color_11 text_color_red">115<br/>Mc</td>
+                        <td id="Lv" class="color_11 text_color_red">116<br/>Lv</td>
+                        <td id="Ts" class="color_11 text_color_red">117<br/>Ts</td>
+                        <td id="Og" class="color_11 text_color_red">118<br/>Og</td>        
+                        <td class="noBorder" colspan="1"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-2 col-12">
+            </div>          
+            <div class="col-xl-8 col-12">
+                <table>
+                    <tr style="height:80px">
+                        <td id="La" class="color_4 text_color_red">57<br/>La</td>
+                        <td id="Ce" class="color_4 text_color_red">58<br/>Ce</td>
+                        <td id="Pr" class="color_4 text_color_red">59<br/>Pr</td>
+                        <td id="Nd" class="color_4 text_color_red">60<br/>Nd</td>
+                        <td id="Pm" class="color_4 text_color_red">61<br/>Pm</td>
+                        <td id="Sm" class="color_4 text_color_red">62<br/>Sm</td>
+                        <td id="Eu" class="color_4 text_color_red">63<br/>Eu</td>
+                        <td id="Gd" class="color_4 text_color_red">64<br/>Gd</td>
+                        <td id="Tb" class="color_4 text_color_red">65<br/>Tb</td>
+                        <td id="Dy" class="color_4 text_color_red">66<br/>Dy</td>
+                        <td id="Ho" class="color_4 text_color_red">67<br/>Ho</td>
+                        <td id="Er" class="color_4 text_color_red">68<br/>Er</td>
+                        <td id="Tm" class="color_4 text_color_red">69<br/>Tm</td>
+                        <td id="Yb" class="color_4 text_color_red">70<br/>Yb</td>
+                        <td id="Lu" class="color_4 text_color_red">71<br/>Lu</td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td id="Ac" class="color_12 text_color_red">89<br/>Ac</td>
+                        <td id="Th" class="color_12 text_color_red">90<br/>Th</td>
+                        <td id="Pa" class="color_12 text_color_red">91<br/>Pa</td>
+                        <td id="U" class="color_12 text_color_red">92<br/>U</td>
+                        <td id="Np" class="color_12 text_color_red">93<br/>Np</td>
+                        <td id="Pu" class="color_12 text_color_red">94<br/>Pu</td>
+                        <td id="Am" class="color_12 text_color_red">95<br/>Am</td>
+                        <td id="Cm" class="color_12 text_color_red">96<br/>Cm</td>
+                        <td id="Bk" class="color_12 text_color_red">97<br/>Bk</td>
+                        <td id="Cf" class="color_12 text_color_red">98<br/>Cf</td>
+                        <td id="Es" class="color_12 text_color_red">99<br/>Es</td>
+                        <td id="Fm" class="color_12 text_color_red">100<br/>Fm</td>
+                        <td id="Md" class="color_12 text_color_red">101<br/>Md</td>
+                        <td id="No" class="color_12 text_color_red">102<br/>No</td>
+                        <td id="Lr" class="color_12 text_color_red">103<br/>Lr</td>  
+                    </tr>
+                </table>
+            </div>
         </div>
     </center>
+        <div class="col-xl-2 col-12">
+        </div>                
     <br>
 <center><h4 style="color: #7a3535; font-weight:bold">Apzīmējumi</h4>
     <table>
         <tr>
-            <td class="color_2 text_color_green">Sārmi</td>
-            <td class="color_3 text_color_red">S-metāli</td>
-            <td class="color_5 text_color_red">P-metāli</td>
-            <td class="color_7 text_color_red">Citi metāli</td>
+            <td id="Sārmi" class="color_2 text_color_green">Sārmi</td>
+            <td id="S-metāli" class="color_3 text_color_red">S-metāli</td>
+            <td id="P-metāli"class="color_5 text_color_red">P-metāli</td>
+            <td id="Citi metāli"class="color_7 text_color_red">Citi metāli</td>
         </tr>
         <tr>
-            <td class="color_6 text_color_green">Pusmetāli</td>
-            <td class="_color_1 text_color_red">Nemetāli</td>
-            <td class="color_8 text_color_red">Halogēni</td>
-            <td class="color_9 text_color_red">Cēlgāzes</td>
+            <td id="Pusmetāli" class="color_6 text_color_green">Pusmetāli</td>
+            <td id="Nemetāli"class="_color_1 text_color_red">Nemetāli</td>
+            <td id="Halogēni"class="color_8 text_color_red">Halogēni</td>
+            <td id="Cēlgāzes"class="color_9 text_color_red">Cēlgāzes</td>
         </tr>
         <tr>
-            <td class="color_4 text_color_green">Aktanīdi</td>
-            <td class="color_12 text_color_red">Lantonīdi</td>
-            <td class="color_11 text_color_red">Nezināmie</td>
+            <td id="Aktanīdi" class="color_4 text_color_green">Aktinīdi</td>
+            <td id="Lantonīdi"class="color_12 text_color_red">Lantnīdi</td>
+            <td id="Nezināmie"class="color_11 text_color_red">Nezināmie</td>
 
         </tr>
     </table>
