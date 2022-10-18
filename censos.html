@@ -13,45 +13,40 @@
         }
 
 .modal {
+  display: none;
   position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
+
 .modal-content {
-  align-self: center;
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
-.btn-close {
+.close {
+  color: #aaaaaa;
   float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightgray;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
         td {
             width: 5vw;
@@ -146,37 +141,37 @@
                 <table>
                     <tr style="height:80px">                
                         <td class="noBorder" colspan="1"></td>
-                        <td class="_color_1 trigger"><button id="H" class="_color_1 text_color_green">1<br/>H</button></td>
+                        <td class="_color_1"><button id="H" class="_color_1 text_color_green">1<br/>H</button></td>
                     </tr>
                     <tr style="height:80px"> 
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="Li" class="color_2 text_color_red">3<br/>Li</button></td>
-                        <td class="color_3 trigger"><button id="Be" class="color_3 text_color_red">4<br/>Be</button></td>          
+                        <td class="color_2"><button id="Li" class="color_2 text_color_red">3<br/>Li</button></td>
+                        <td id="Be"class="color_3 text_color_red">4<br/>Be</td>           
                     </tr>
                     <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="Na" class="color_2 text_color_red">11<br/>Na</button></td>
-                        <td class="color_3 trigger"><button id="Mg" class="color_3 text_color_red">12<br/>Mg</button></td>           
+                        <td id="Na"class="color_2 text_color_red">11<br/>Na</td>
+                        <td id="Mg"class="color_3 text_color_red">12<br/>Mg</td>          
                     </tr>
                     <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="K" class="color_2 text_color_red">19<br/>K</button></td>
-                        <td class="color_3 trigger"><button id="Ca" class="color_3 text_color_red">20<br/>Ca</button></td>     
+                        <td id="K"class="color_2 text_color_red">19<br/>K</td>
+                        <td id="Ca"class="color_3 text_color_red">20<br/>Ca</td>        
                     </tr>
                     <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="Rb" class="color_2 text_color_red">37<br/>Rb</button></td>
-                        <td class="color_3 trigger"><button id="Sr" class="color_3 text_color_red">38<br/>Sr</button></td>             
+                        <td id="Rb" class="color_2 text_color_red">37<br/>Rb</td>
+                        <td id="Sr" class="color_3 text_color_red">38<br/>Sr</td>          
                     </tr>
                     <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="Cs" class="color_2 text_color_blue">55<br/>Cs</button></td>
-                        <td class="color_3 trigger"><button id="Ba" class="color_3 text_color_red">56<br/>Ba</button></td>                   
+                        <td id="Cs" class="color_2 text_color_blue">55<br/>Cs</td>
+                        <td id="Ba" class="color_3 text_color_red">56<br/>Ba</td>         
                     </tr>
                     <tr style="height:80px">
                         <td class="noBorder" colspan="1"></td>
-                        <td class="color_2 trigger"><button id="Fr" class="color_2 text_color_blue">87<br/>Fr</button></td>
-                        <td class="color_3 trigger"><button id="Ra" class="color_3 text_color_red">88<br/>Ra</button></td>             
+                        <td id="Fr" class="color_2 text_color_blue">87<br/>Fr</td>
+                        <td id="Ra" class="color_3 text_color_red">88<br/>Ra</td>
                     </tr>
                 </table>
             </div>
@@ -403,138 +398,63 @@
     </table>
 </center>
 </div>
+
 <!--H-->
-<div class="modal">
-  <div class="modal-content"><span class="btn-close">&times;</span>
-<p><h1><b>Ūdeņradis - H</b></h1></p>
+<div id="myModal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p><h1><b>Ūdeņradis - H</b></h1></p>
       <p>Atomskaitlis: 1, molmasa 1,00784 g/mol, oksidēšanās pakāpe +1 (-1 metālu hidrīdos), sastopams tikai H2 formā, Elektronegativitāte: 2,2, blīvums 0,0899 kg/m3, kušanas temperatūra 14,025 K (-259,14 °C), viršanas temperatūra 20,268 K (-252,87 °C) Ūdeņradim ir trīs izotopi, no kuriem visizplatītākais un stabilākais ir izotops 1H ar atommasu 1 jeb protijs. Sastopams arī izotops 2H ar masas skaitli 2, kura kodolā ir viens protons un viens neitrons — deitērijs. Ir pazīstams arī izotops 3H ar diviem neitroniem kodolā. To sauc par tritiju, tas ir β radioaktīvs. 
         Reakcija: O2 + 2H2 → 2H2O<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Hydrogen">Ūdeņradis</a></p>
-        <p><img src="https://www.ballard.com/images/default-source/default-album/hydrogen-atom.png?sfvrsn=6fecc380_2" alt="Ūdeņradis" width="330" height="280"></p>
-  </div>
-</div>
-<!--Li-->
-<div class="modal">
-  <div class="modal-content"><span class="btn-close">&times;</span>
-<p><h1><b>Litijs - Li</b></h1></p>
-      <p>Atomskaitlis: 3, molmasa: 6,941 g/mol, oksidēšanās pakāpe +1, elektronegativitāte: 0,98, blīvums 535 kg/m3 kušanas temperatūra 453,69 K (180,54 °C), viršanas temperatūra 1615 K (1342 °C). 92,7% dabā atrodamā litija ir izotops 7Li. Otrs stabilais litija izotops ir 6Li (7,3%). Mākslīgi iegūti vairāki radioaktīvi litija izotopi. Reakcija: 6Li + N2 → 2Li3N<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Hydrogen">Litijs</a></p>
-        <p><img src="https://www.thermofisher.com/blog/wp-content/uploads/2015/09/petalite_lithium_aluminum_silicate_bikita_40_miles_east_of_fort_victoria_zimbabwe_1934.jpg" alt="Litijs" width="330" height="280"></p>
-  </div>
-</div>
-<!--Be-->
-<div class="modal">
-  <div class="modal-content"><span class="btn-close">&times;</span>
-    <p><h1><b>Berilijs - Be</b></h1></p>
-    <p>Atomskaitlis: 4, molmasa: 9,0122 g/mol, oksidēšanās pakāpes +3, +2(visbiežāk), +1, elektronegativitāte 1,57 blīvums 1848 kg/m3 kušanas temperatūra 1551,15 K (1287 °C) viršanas temperatūra 3243,15 K (2469 °C), viens stabils izotops — berilijs-9, Reakcija: Cl2 + Be  → BeCl2   Berilijs un tā savienojumi (it sevišķi šķīstošie un gaistošie) ir ļoti indīgi!<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Beryllium">Berilijs</a></p>
-      <p><img src="https://cdn.mos.cms.futurecdn.net/Botdck3S6sjWhQNTB28Uc3-1200-80.jpg" alt="Berilijs" width="330" height="280"></p>
-  </div>
-</div>
-<!--Na-->
-<div class="modal">
-  <div class="modal-content"><span class="btn-close">&times;</span>
-    <p><h1><b>Nātrijs - Na</b></h1></p>
-    <p>Atomskaitlis: 11, molmasa: 22, 98976 g/mol, oksidēšanās pakāpe +1, elektronegativitāte: 0,93, blīvums 968 kg/m3 kušanas temperatūra 370,87 K (97,72°C), viršanas temperatūra 1156 K (883 °C), stabilais izotops – nātrijs-23, ir zināmi nātrija radioizotopi (no nātrija-18 līdz nātrijam-39) 
-        Reakcija: 2Na2O2 + 2H2O → 4NaOH + O2↑
-        <br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Sodium">Nātrijs</a></p>
-      <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Na_%28Sodium%29.jpg/640px-Na_%28Sodium%29.jpg" alt="Nātrijs" width="330" height="280"></p>
-  </div>
-</div>
-<!--Mg-->
-<div class="modal">
-  <div class="modal-content"><span class="btn-close">&times;</span>
-    <p><h1><b>Magnijs - Mg</b></h1></p>
-    <p>Aatomskaitlis: 12, molmasa: 24,305 g/mol, oksidēšanās pakāpes +2, +1(ļoti reti), elektronegativitāte 1,31 blīvums 1738 kg/m3 kušanas temperatūra 932 K (650 °C) viršanas temperatūra 1363 K (1090 °C), trīs stabili izotopi — magnijs-24, magnijs-25 un magnijs-26 (11,01%) Dabā radioaktīvais magnijs nav sastopams. Reakcija:  MgCl2  + Ca(OH)2  → Mg(OH)2↓ + CaCl2<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Magnesium">Magnijs</a></p>
-      <p><img src="https://cdn.britannica.com/38/131138-050-62E0CD67/Magnesium-magnesium-crystals-processing-crust-Earth.jpg" alt="Magnijs" width="330" height="280"></p>
-  </div>
-</div>
-<!--K-->
-<div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Kālijs - K</b></h1></p>
-        <p>Atomskaitlis: 19, molmasa: 39,0983 g/mol, oksidēšanās pakāpe +1, elektronegativitāte 0,82 blīvums 856 kg/m3 kušanas temperatūra 336,53 K (63,38 °C) viršanas temperatūra 1032 K (759 °C), stabili izotopi: kālijs-39 un kālijs-41, dabā reti sastopams radioaktīvais kālijs-40, Reakcija: 2K + 2H2O → 2KOH + H2↑<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Potassium">Kālijs</a></p>
-          <p><img src="https://cdn.britannica.com/77/131177-050-79292189/fragments-Potassium-metal.jpg" alt="Kālijs" width="330" height="280"></p>
+        <p><img src="https://cdn.britannica.com/99/22399-050-FFE3FA25/Hydrogen-H-Its-symbol-square-hydrogen-properties.jpg" alt="Ūdeņradis"></p>
     </div>
   </div>
-<!--Ca-->
-  <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Kalcijs - Ca</b></h1></p>
-        <p>Atomskaitlis: 20, molmasa: 40,078 g/mol, oksidēšanās pakāpe +2, elektronegativitāte 1,00 blīvums 1550 kg/m3 kušanas temperatūra 1115 K (842 °C) viršanas temperatūra	1757 K (1484 °C), seši dabā sastopami stabili izotopi no kalcija-40 līdz kalcijam-48, Reakcija: Ca + 2H2O → Ca(OH)2  + H2↑<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Calcium">Kalcijs</a></p>
-          <p><img src="https://www.chemistrylearner.com/wp-content/uploads/2018/09/Calcium-Metal.jpg" alt="Kalcijs" width="330" height="280"></p>
-    </div>
-  </div>
-  <!--Rb-->
-  <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Rubīdijs - Rb</b></h1></p>
-        <p>Atomskaittlis: 37, molmasa: 85,4678 g/mol, oksidēšanās pakāpe +1, elektronegativitāte 0,82 blīvums 1532 kg/m3 kušanas temperatūra 312,46 K (39,31°C) viršanas temperatūra 961 K (688 °C), viens stabils izotops — rubīdijs-85, otrs izotops rubīdijs-87 (27,83%) ir nestabils, reakcija: 2Rb + 2H2O → 2RbOH + H2↑<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Rubidium">Rubīdijs</a></p>
-          <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Rb5.JPG" alt="Rubīdijs" width="330" height="280"></p>
-    </div>
-  </div>
-  <!--Sr-->
-  <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Stroncijs - Sr</b></h1></p>
-        <p>Atomskaitlis: 38, molmasa: 87,62 g/mol, oksidēšanās pakāpe +2, elektronegativitāte 0,95 blīvums 2630 kg/m3 kušanas temperatūra 1050 K (777 °C) viršanas temperatūra	1655 K (1382 °C), Dabā ir sastopami četri stabili stroncija izotopi: stroncijs-88, stroncijs-86, stroncijs-87 un stroncijs-84 zināmi izotopi, kuru masas skaitlis ir no 73 līdz 107. Reakcija Sr + 2H2O → Sr(OH)2 + H2 <br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Strontium">Stroncijs</a></p>
-          <p><img src="https://static.wikia.nocookie.net/exodus3000/images/b/ba/Strontium.jpg/revision/latest/scale-to-width-down/800?cb=20100522093251" alt="Stroncijs" width="330" height="280"></p>
-    </div>
-  </div>
-   <!--Cs-->
-   <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Cēzijs - Cs</b></h1></p>
-        <p>Atomskaitlis: 55, molmasa: 132,9054 g/mol, oksidēšanās pakāpe +1, elektronegativitāte 0,79 blīvums 1879 kg/m3 kušanas temperatūra 301,59 K (28,44°C) viršanas temperatūra 944 K (671 °C), viens stabils cēzija izotops — cēzijs–133,laboratorijas apstākļos var iegūt cēzija izotopus no cēzija–114 līdz cēzijam–145, Reakcija: CsOH + HNO3 → CsNO3 + H2O<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Caesium">Cēzijs</a></p>
-          <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Cesium.jpg" alt="Cēzijs" width="330" height="280"></p>
-    </div>
-  </div>
-   <!--Ba-->
-   <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Bārijs - Ba</b></h1></p>
-        <p>Aatomskaitlis: 56, molmasa: 137,327 g/mol, oksidēšanās pakāpe +2, elektronegativitāte 0,89 blīvums 3510 kg/m3 kušanas temperatūra 1000 K (727,2 °C) viršanas temperatūra	2143 K (1870 °C), Dabā ir sastopami septiņi bārija izotopi: bārijs-137, bārijs-136, bārijs-135, bārijs-134, bārijs-132 un bārijs-130, Reakcija: Ba + 2H2O → Ba(OH)2 + H2   Šķīstošie bārija savienojumi ir indīgi.<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Barium">Bārijs</a></p>
-          <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Barium_unter_Argon_Schutzgas_Atmosph%C3%A4re.jpg" alt="Bārijs" width="330" height="280"></p>
-    </div>
-  </div>
-   <!--Fr-->
-   <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Francijs - Fr</b></h1></p>
-        <p>Atomskaitlis: 87, molmasa: 223 g/mol, oksidēšanās pakāpe +1, elektronegativitāte 0,7 blīvums 1870 kg/m3 kušanas temperatūra 300 K (27 °C) viršanas temperatūra 950 K (677 °C), viens radioaktīvs francija izotops, francijs–223, zināmi 34 francija izotopi, Reakcija: 2Fr + 2H2O → 2FrOH + H2↑<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Francium">Francijs</a></p>
-          <p><img src="https://static.wikia.nocookie.net/periodictableofelements/images/f/f3/Enhanced-buzz-12527-1366210293-8.jpg/revision/latest?cb=20150702162258" alt="Francijs" width="330" height="280"></p>
-    </div>
-  </div>
-   <!--Ra-->
-   <div class="modal">
-    <div class="modal-content"><span class="btn-close">&times;</span>
-        <p><h1><b>Rādijs - Ra</b></h1></p>
-        <p>Atomskaitlis: 88, molmasa: 226 g/mol, oksidēšanās pakāpe +2, elektronegativitāte 0,9 blīvums 5000 kg/m3 kušanas temperatūra 973 K (700 °C) viršanas temperatūra 2010 K (1737 °C), zināmi 14 radioaktīvie izotopi, stabilu izotopu nav, Reakcija: īsti nevare definēt, jo nav stabilu izotopu.<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Radium">Rādijs</a></p>
-          <p><img src="https://img.etimg.com/thumb/msid-67113757,width-640,height-480,imgsize-193207,resizemode-4/radium.jpg" alt="Rādijs" width="330" height="280"></p>
-    </div>
-  </div>
-  
-      
-  
-  
-
-
-
-
-
-
-
-
-<script>
-const triggers = document.getElementsByClassName('trigger');
-const triggerArray = Array.from(triggers).entries();
-const modals = document.getElementsByClassName('modal');
-const closeButtons = document.getElementsByClassName('btn-close');
-
-for (let [index, trigger] of triggerArray) {
-  const toggleModal = () => {
-    modals[index].classList.toggle('show-modal');
+  <script>
+  var modal = document.getElementById("myModal1");
+  var btn = document.getElementById("H");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
   }
-  trigger.addEventListener("click", toggleModal);
-  closeButtons[index].addEventListener("click", toggleModal);
-}
-</script>
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<!--Li-->
+<div id="myModal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Litijs - Li</p>
+      <p>Atomskaitlis: 3, molmasa: 6,941 g/mol, oksidēšanās pakāpe +1, elektronegativitāte: 0,98, blīvums 535 kg/m3 kušanas temperatūra 453,69 K (180,54 °C), viršanas temperatūra 1615 K (1342 °C). 92,7% dabā atrodamā litija ir izotops 7Li. Otrs stabilais litija izotops ir 6Li (7,3%). Mākslīgi iegūti vairāki radioaktīvi litija izotopi. Reakcija: 6Li + N2 → 2Li3N<br><br>Vairāk info:<a href="https://en.wikipedia.org/wiki/Hydrogen">Litijs</a></p></p>
+        <p><img src="https://cdn.britannica.com/97/22397-050-9EA22B15/Lithium-lithium-symbol-square-Li-properties-some.jpg" alt="Ūdeņradis"></p>
+    </div>
+  </div>
+  <script>
+  var modal = document.getElementById("myModal3");
+  var btn = document.getElementById("Li");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
 </body>
 </html>
